@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   
+  <meta charset="UTF-8">
+   
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modern Weather App</title>
+   
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+</head>
+
+<body>
+    <div class="container">
+        <h1>Modern Weather App</h1>
+        <div class="search-box">
+            <input type="text" id="cityInput" placeholder="Enter city name...">
+            <button onclick="getWeather()">Get Weather</button>
+            <button onclick="getLocationWeather()">Get Weather by Location</button>
+          </div>
+
+        <!-- Loader -->
+        <div class="loader" id="loader" style="display: none;"></div>
+
+        <!-- Weather and Map Wrapper -->
+        <div class="weather-map-wrapper" id="weatherMapWrapper" style="display: none;">
+            <!-- Weather Info -->
+            <div class="weather-info" id="weatherInfo">
+        <h2 id="cityName"></h2>
+        <p id="weatherDescription"></p>
+        <h3 id="temperature"></h3>
+        <p id="humidity"></p>
+        <p id="windSpeed"></p>
+      </div>
+
+      <!-- Map Section -->
+            <div id="map"></div>
+          </div>
+
+        <!-- Weather Forecast Section -->
+        <div class="forecast" id="forecast" style="display: none;">
+            <h2>5-Day Forecast</h2>
+            <div id="forecastContainer"></div>
+          </div>
+      </div>
+
+   
+  <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+   
+  <script src="script.js"></script>
+</body>
+
+</html>
